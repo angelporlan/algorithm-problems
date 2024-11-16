@@ -20,3 +20,5 @@ function cyberReindeer(road, time) {
 let road = 'S..|...|..';
 const time = 10; 
 console.log(cyberReindeer(road, time));
+console.log(cyberReindeer('S.|..|...|..', 12));
+
