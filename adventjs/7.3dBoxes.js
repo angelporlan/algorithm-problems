@@ -5,17 +5,23 @@
 // Las líneas de los regalos se dibujan con # y las caras con el símbolo que nos pasan como parámetro
 
 function drawGift(size, symbol) {
-    const width = 2 * n + 1;
-    console.log(' '.repeat(n) + '#'.repeat(width));
+    let result = '';
     
-    for (let i = 1; i < n; i++) {
-        console.log(' '.repeat(n - i) + '#' + symbol.repeat(i) + '#' + symbol.repeat(n - i) + '#');
-    }
-    console.log('#'.repeat(width));
+    const width = 2 * size + 1;
     
-    for (let i = n - 1; i > 0; i--) {
-        console.log(' '.repeat(n - i) + '#' + symbol.repeat(i) + '#' + symbol.repeat(n - i) + '#');
+    result += ' '.repeat(size) + '#'.repeat(width) + '\n';
+    
+    for (let i = 1; i < size; i++) {
+        result += ' '.repeat(size - i) + '#' + symbol.repeat(i) + '#' + symbol.repeat(size - i) + '#\n';
     }
     
-    console.log(' '.repeat(n) + '#'.repeat(width));
+    result += '#'.repeat(width) + '\n';
+    
+    for (let i = size - 1; i > 0; i--) {
+        result += ' '.repeat(size - i) + '#' + symbol.repeat(i) + '#' + symbol.repeat(size - i) + '#\n';
+    }
+    
+    result += ' '.repeat(size) + '#'.repeat(width) + '\n';
+    
+    return result;
 }
