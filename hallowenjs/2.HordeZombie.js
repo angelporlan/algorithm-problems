@@ -18,8 +18,35 @@
 
 
 function battleHorde(zombies, humans) {
-    // Code here
-    return 'x'
+    let zombiePower = zombies.split('').map(Number);
+    let humanPower = humans.split('').map(Number);
+
+    let currentZombie = 0;
+    let currentHuman = 0;
+
+    for (let i = 0; i < zombiePower.length; i++) {
+        currentZombie += zombiePower[i];
+        currentHuman += humanPower[i];
+
+        if (currentZombie > currentHuman) {
+            currentZombie -= currentHuman; 
+            currentHuman = 0;
+        } else if (currentHuman > currentZombie) {
+            currentHuman -= currentZombie; 
+            currentZombie = 0;
+        } else {
+            currentZombie = 0;
+            currentHuman = 0;
+        }
+    }
+
+    if (currentZombie > 0) {
+        return `${currentZombie}z`;
+    } else if (currentHuman > 0) {
+        return `${currentHuman}h`;
+    } else {
+        return "x";
+    }
 }
 
 
