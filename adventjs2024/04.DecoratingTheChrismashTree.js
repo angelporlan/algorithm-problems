@@ -7,3 +7,20 @@
 // Todos los árboles tienen un tronco de dos líneas, representado por el carácter #.
 // El árbol siempre debe tener la misma longitud por cada lado.
 // Debes asegurarte de que el árbol tenga la forma correcta usando saltos de línea \n para cada línea.
+
+function createXmasTree(height, ornament) {
+    let result = ''
+    const maxWidth = 1 + (2 * (height - 1))
+    let halfWidth = (maxWidth - 1) / 2
+    
+    for (let i = 0; i < height; i++) {  
+        result += '_'.repeat(halfWidth) + ornament.repeat( maxWidth - (halfWidth * 2)) + '_'.repeat(halfWidth) + '\n'
+        halfWidth -= 1
+
+    }
+    result += '_'.repeat((maxWidth - 1) / 2) + '#' + '_'.repeat((maxWidth - 1) / 2) + '\n' + '_'.repeat((maxWidth - 1) / 2) + '#' + '_'.repeat((maxWidth - 1) / 2)
+
+    return result
+}
+
+console.log(createXmasTree(5, '*'))
