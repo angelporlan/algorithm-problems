@@ -2,6 +2,11 @@
 
 This repository contains my solutions to various algorithm and data structure problems, solved in **JavaScript** and executed using **Node.js**. The problems cover a wide range of topics such as searching, sorting, dynamic programming, recursion, and more. It includes common interview problems and challenges from competitive programming platforms like **LeetCode**, **HackerRank**, and **Codewars**.
 
+## Sources / Acknowledgements
+
+* [LeetCode](https://leetcode.com/)
+* [AdventJS](https://adventjs.dev/) and [HalloweenJS](https://halloweenjs.dev/) created by [midudev](https://midu.dev)
+
 ## Repository Structure
 
 Each file in the repository represents the solution to a specific problem. The structure of each file follows this format:
