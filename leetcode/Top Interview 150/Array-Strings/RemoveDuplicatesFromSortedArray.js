@@ -56,7 +56,7 @@ const removeDuplicates = function(nums) {
             k++;
         }
     }
-    
+    console.log(nums);
     return k;
 };
 
